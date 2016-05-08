@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<meta charset="utf-8"/>
+        <meta name="description" content="Testimonies in Context"/>
+		<title>Testimonies in Context</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script src="lib/lodash/lodash.js"></script>
+		<script src="lib/jquery/jquery-2.2.3.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script src="js/main.js"></script>
+	</head>
+	<body>
+		<div id="main-div">
+			<div id="header"></div>
+			<div id="sidebar">
+				<div class="bg"></div>
+				<div class="item ghetto" data-types="ghetto">
+					<input type="checkbox" class="chkbox" checked/>
+					<span class="icon"></span>
+					<span class="text twolines">Jewish Ghettos</span>
+				</div>
+				<div class="item camps" data-types="camp">
+					<input type="checkbox" class="chkbox" checked/>
+					<span class="icon"></span>
+					<span class="text">Camps</span>
+				</div>
+				<div class="item testimony testimony_written" data-types="picture,document">
+					<input type="checkbox" class="chkbox" checked/>
+					<span class="icon"></span>
+					<span class="text twolines">Pictures & Documents</span>
+				</div>
+				<div class="item testimony testimony_video" data-types="video">
+					<input type="checkbox" class="chkbox" checked/>
+					<span class="icon"></span>
+					<span class="text twolines">Video Testimonies</span>
+				</div>
+				<div class="item testimony testimony_audio" data-types="audio">
+					<input type="checkbox" class="chkbox" checked/>
+					<span class="icon"></span>
+					<span class="text twolines">Audio Testimonies</span>
+				</div>
+				<div class="item resistance" data-types="resistance">
+					<input type="checkbox" class="chkbox" checked/>
+					<span class="icon"></span>
+					<span class="text twolines">Jewish Resistance</span>
+				</div>
+				<div class="item righteous" data-types="righteous">
+					<input type="checkbox" class="chkbox" checked/>
+					<span class="icon"></span>
+					<span class="text">Righteous</span>
+				</div>
+				<div class="item allied" data-types="allied">
+					<input type="checkbox" class="chkbox" checked/>
+					<span class="icon"></span>
+					<span class="text twolines">Allied Forces</span>				
+				</div>
+			</div>
+			<div id="top">
+				<div id="map"></div>
+				<div id="map-down-panel">
+					<img id="play-btn" src="img/play.png"/>
+					<span id="date"></span>
+				</div>
+			</div>
+			<div id="bottom">
+				<input id="range" type="range" min="0" max="117" step="1" value="0"/>
+			</div>
+		</div>
+	</body>
+</html>
+

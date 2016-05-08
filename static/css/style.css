@@ -1,0 +1,303 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #333;
+	color: white;
+	margin: 0;
+	padding: 0;
+}
+
+#main-div {
+	width: 1024px;
+	height: 768px;
+	position: relative;
+	margin: 0 auto;
+	top: 50%;
+	margin-top: -384px;
+}
+
+#top {
+	width: 930px;
+	height: 578px;
+	padding-left: 95px;
+	padding-top: 60px;
+}
+
+#map {
+	width: 929px;
+	height: 517px;
+}
+
+#map-down-panel {
+	position: relative;
+	background: #5797a0;
+	width: 929px;
+	height: 25px;
+	line-height: 25px;
+	margin-top: -24px;
+	font-family: arial;
+	font-size: 14px;
+}
+
+#play-btn {
+	margin: -1px 25px 0 25px;
+	vertical-align: middle;
+}
+
+#date {
+	color: white;
+}
+
+#bottom {
+	width: 1024px;
+	height: 190px;
+	background:url('timeline.png');
+}
+
+#range {
+	width: 1014px;
+	margin-left: 8px;
+	margin-top: 24px;
+}
+
+.infowindow-eye {
+	float: right;
+	margin-right: 25px;
+	margin-top: -20px;
+	margin-bottom: 4px;
+	cursor: pointer;
+}
+
+.infowindow-bookmark {
+	float: right;
+	margin-top: -20px;
+	margin-bottom: 4px;
+	cursor: pointer;
+}
+
+.infowindow-content {
+	position: relative;
+}
+
+.infowindow-left {
+	display: inline-block;
+	position: absolute;
+	left:  20px;
+	top: 50%;
+}
+
+.infowindow-right {
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	top: 50%;
+}
+
+.infowindow-image {
+	width: 380px;
+	display: inline-block;
+	margin-left: 20px;
+}
+
+.infowindow-video {
+	width: 300px;
+	margin-left: 20px;
+}
+
+.infowindow-audio {
+	width: 300px;
+	margin-left: 20px;
+}
+
+.infowindow-text {
+	display: inline-block;
+	margin-left: 20px;
+	color: #333;
+	text-align: left;
+	line-height: 18px;
+	margin-top: 10px;
+}
+
+.infowindow-related {
+	margin-top: 20px;
+	margin-left: 20px;
+	color: #333;
+	cursor: pointer;
+}
+
+#header {
+	width:1024px;
+	height:60px;
+	position:absolute;
+	background:url('header.png');
+	border-bottom:1px solid #fff;
+}
+
+#sidebar {
+	width:95px;
+	position:absolute;
+	height: 518px;
+	top:60px;
+	background-color:#fff;
+}
+
+#sidebar .item {
+	width:95px;
+	height:61px;
+	background-color:#dedbdb;
+	z-index:10;
+	transition: all 0.4s ease;
+	margin-bottom:4px;
+	position:absolute;
+	cursor:pointer;
+}
+
+#sidebar .item.ghetto:hover {
+	background-color:#cdab37;
+}
+
+#sidebar .item.camps:hover {
+	background-color:#b2ad65;
+}
+
+#sidebar .item.testimony:hover {
+	background-color:#35b18a;
+}
+
+#sidebar .item.resistance:hover {
+	background-color:#db975a;
+}
+
+#sidebar .item.righteous:hover {
+	background-color:#6c9b98;
+}
+
+#sidebar .item.allied:hover {
+	background-color:#dd5e49;
+}
+
+#sidebar .item .icon {
+    background: url('sprite-sidebar_icons.png');
+    width: 34px;
+    height: 38px;
+    display: inline-block;
+	margin-top:10px;
+	margin-left:28px;
+	background-position-y: -54px;
+}
+
+#sidebar .item .chkbox {
+	position:absolute;
+	left:0;
+	top:0;
+	display:none;
+}
+
+#sidebar .item .chkbox:checked + .icon {
+	background-position-y: -154px;
+}
+
+#sidebar .item:hover .chkbox:checked + .icon ,
+#sidebar .item:hover .icon {
+	 background-position-y: -104px;
+}
+
+#sidebar .item:hover .text {
+	display:inline-block;
+}
+
+#sidebar .item .text {
+	display: none;
+	position:absolute;
+    vertical-align: top;
+    margin-top: 18px;
+    font-size: 20px;
+    font-family: Arial;
+    margin-left: 12px;
+	padding-right:20px;
+}
+
+#sidebar .item .text.twolines {
+	margin-top:8px;
+}
+
+#sidebar .item.allied .text {
+	padding-right:48px;
+}
+
+#sidebar .item.ghetto {
+	top:0;
+}
+
+#sidebar .item.ghetto .icon {
+	background-position-x: -8px;
+}
+
+#sidebar .item.camps {
+	top:65px;
+}
+
+#sidebar .item.camps .icon {
+	background-position-x: -56px;
+    width: 38px;
+}
+
+#sidebar .item.testimony_written {
+	top:130px;
+}
+
+#sidebar .item.testimony_written .icon {
+    background-position-x: -107px;
+    width: 35px;
+}
+
+#sidebar .item.testimony_video {
+	top:195px;
+}
+
+#sidebar .item.testimony_video .icon {
+	background-position-x: -160px;
+    width: 30px;
+}
+
+#sidebar .item.testimony_audio {
+	top:260px;
+}
+
+#sidebar .item.testimony_audio .icon {
+	background-position-x: -209px;
+    width: 34px;
+}
+
+#sidebar .item.resistance {
+	top:325px;
+}
+
+#sidebar .item.resistance .icon {
+	background-position-x: -258px;
+    width: 34px;
+}
+
+#sidebar .item.righteous {
+	top:390px;
+}
+
+#sidebar .item.righteous .icon {
+	background-position-x: -308px;
+    width: 34px;
+}
+
+#sidebar .item.allied {
+	top:455px;
+}
+
+#sidebar .item.allied .icon {
+	background-position-x: -358px;
+    width: 34px;
+}
+
+#sidebar .item:hover {
+	width:210px;
+}
