@@ -12,29 +12,31 @@
         <script src="js/tic-main.js"></script>
 	</head>
 	<body ng-controller="ticController">
-	    <div id="main-div">
-			<div id="top">
-				<div id="header"></div>
-			</div>
-			<div id="middle">
-				<div id="sidebar">
-					<div class="bg"></div>
-					<div ng-repeat="entity in model.entities" data-types="{{entity.dataTypes}}" class="sidebar__item {{entity.classStr}}">
-						<input type="checkbox" class="sidebar__item__checkbox" checked/>
-						<span class="sidebar__item__icon"></span>
-						<span class="sidebar__item__text" ng-class="{'two-lines': entity.isLongText}">{{entity.text}}</span>
+	    <div id="main-div" class="main-div">
+			<div class="tic-div">
+				<div class="tic-top">
+					<div class="tic-header"></div>
+				</div>
+				<div class="tic-middle">
+					<div class="sidebar">
+						<div class="bg"></div>
+						<div ng-repeat="entity in model.entities" data-types="{{entity.dataTypes}}" class="sidebar__item {{entity.classStr}}">
+							<input type="checkbox" class="sidebar__item__checkbox" checked/>
+							<span class="sidebar__item__icon"></span>
+							<span class="sidebar__item__text" ng-class="{'two-lines': entity.isLongText}">{{entity.text}}</span>
+						</div>
+					</div>
+					<div class="map-container">
+						<div id="map" class="map"></div>
+						<div class="map-info-panel">
+							<img class="play-btn" src="img/play.png"/>
+							<span id="date-text" class="date-text"></span>
+						</div>
 					</div>
 				</div>
-				<div id="map-container">
-					<div id="map"></div>
-					<div id="map-info-panel">
-						<img id="play-btn" src="img/play.png"/>
-						<span id="date-text"></span>
-					</div>
+				<div class="tic-bottom">
+					<input id="date-slider" class="date-slider" type="range" min="0" max="117" step="1" value="0"/>
 				</div>
-			</div>
-			<div id="bottom">
-				<input id="date-slider" type="range" min="0" max="117" step="1" value="0"/>
 			</div>
 		</div>
 	</body>

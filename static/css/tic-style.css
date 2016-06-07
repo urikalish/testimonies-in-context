@@ -14,46 +14,48 @@ body {
 	color: white;	
 }
 
-#main-div {
+.main-div {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.tic-div {
+	flex: 0 0 auto;
 	width: 1024px;
 	height: 768px;
 	position: relative;
-	margin: 0 auto;
-	top: 50%;
-	margin-top: -384px;
 }
 
-#top {
-}
-
-#header {
+.tic-header {
 	width:1024px;
 	height:60px;
 	background:url('header.png');
 	border-bottom:1px solid #fff;
 }
 
-#middle {
+.tic-middle {
 	display: flex;
 }
 
-#sidebar {
+.sidebar {
 	flex: 0 0 95px;
 	position: relative;
 	height: 518px;
     background-color: #fff;
 }
 
-#map-container {
+.map-container {
 	flex: 0 0 929px;
 }
 
-#map {
+.map {
 	width: 929px;
 	height: 517px;
 }
 
-#map-info-panel {
+.map-info-panel {
 	position: relative;
 	background: #5797a0;
 	width: 929px;
@@ -64,22 +66,22 @@ body {
 	font-size: 14px;
 }
 
-#play-btn {
+.play-btn {
 	margin: -1px 25px 0 25px;
 	vertical-align: middle;
 }
 
-#date-text {
+.date-text {
 	color: white;
 }
 
-#bottom {
+.tic-bottom {
 	width: 1024px;
 	height: 190px;
 	background:url('timeline.png');
 }
 
-#date-slider {
+.date-slider {
 	width: 1014px;
 	margin-left: 8px;
 	margin-top: 24px;
