@@ -2,7 +2,7 @@ var ticApp = angular.module('ticApp', []);
 
 ticApp.controller('ticController', function ticController($scope) {
 	$scope.model = {
-		filters: [
+		entities: [
 			{
 				text: 'Jewish Ghettos',
 				isLongText: true,

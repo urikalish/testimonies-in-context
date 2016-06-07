@@ -16,10 +16,10 @@
 			<div id="header"></div>
 			<div id="sidebar">
 				<div class="bg"></div>
-				<div ng-repeat="filter in model.filters" data-types="{{filter.dataTypes}}" class="sidebar__item {{filter.classStr}}">
+				<div ng-repeat="entity in model.entities" data-types="{{entity.dataTypes}}" class="sidebar__item {{entity.classStr}}">
 					<input type="checkbox" class="sidebar__item__checkbox" checked/>
 					<span class="sidebar__item__icon"></span>
-					<span class="sidebar__item__text" ng-class="{'two-lines': filter.isLongText}">{{filter.text}}</span>
+					<span class="sidebar__item__text" ng-class="{'two-lines': entity.isLongText}">{{entity.text}}</span>
 				</div>
 			</div>
 			<div id="top">
