@@ -167,7 +167,15 @@ body {
 	background-color:#b2ad65;
 }
 
-#sidebar .item.testimony:hover {
+#sidebar .item.testimony-written:hover {
+	background-color:#35b18a;
+}
+
+#sidebar .item.testimony-video:hover {
+	background-color:#35b18a;
+}
+
+#sidebar .item.testimony-audio:hover {
 	background-color:#35b18a;
 }
 
@@ -224,7 +232,7 @@ body {
 	padding-right:20px;
 }
 
-#sidebar .item .text.twolines {
+#sidebar .item .text.two-lines {
 	margin-top:8px;
 }
 
@@ -249,29 +257,29 @@ body {
     width: 38px;
 }
 
-#sidebar .item.testimony_written {
+#sidebar .item.testimony-written {
 	top:130px;
 }
 
-#sidebar .item.testimony_written .icon {
+#sidebar .item.testimony-written .icon {
     background-position-x: -107px;
     width: 35px;
 }
 
-#sidebar .item.testimony_video {
+#sidebar .item.testimony-video {
 	top:195px;
 }
 
-#sidebar .item.testimony_video .icon {
+#sidebar .item.testimony-video .icon {
 	background-position-x: -160px;
     width: 30px;
 }
 
-#sidebar .item.testimony_audio {
+#sidebar .item.testimony-audio {
 	top:260px;
 }
 
-#sidebar .item.testimony_audio .icon {
+#sidebar .item.testimony-audio .icon {
 	background-position-x: -209px;
     width: 34px;
 }

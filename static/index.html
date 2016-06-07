@@ -1,58 +1,25 @@
-<html>
+<html ng-app="ticApp">
 	<head>
 		<title>Testimonies in Context</title>
 		<meta name="description" content="Testimonies in Context"/>		
 		<link rel="stylesheet" type="text/css" href="css/tic-style.css"/>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeR621oXBpqxwSEdtPBBMI5BdnqIhDSP0"></script>
+		<script src="https://www.google.com/jsapi?key=AIzaSyBeR621oXBpqxwSEdtPBBMI5BdnqIhDSP0"></script>
 		<script src="lib/lodash.js"></script>
 		<script src="lib/jquery-2.2.4.min.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeR621oXBpqxwSEdtPBBMI5BdnqIhDSP0"></script>
-		<script type="text/javascript" src="https://www.google.com/jsapi?key=AIzaSyBeR621oXBpqxwSEdtPBBMI5BdnqIhDSP0"></script>
+		<script src="lib/angular.min.js"></script>
+		<script src="js/map-style.js"></script>
         <script src="js/tic-main.js"></script>
 	</head>
-	<body>
-		<div id="main-div">
+	<body ng-controller="ticController">
+	    <div id="main-div">
 			<div id="header"></div>
 			<div id="sidebar">
 				<div class="bg"></div>
-				<div class="item ghetto" data-types="ghetto">
+				<div ng-repeat="filter in model.filters" class="item {{filter.classStr}}" data-types="{{filter.dataTypes}}">
 					<input type="checkbox" class="chkbox" checked/>
 					<span class="icon"></span>
-					<span class="text twolines">Jewish Ghettos</span>
-				</div>
-				<div class="item camps" data-types="camp">
-					<input type="checkbox" class="chkbox" checked/>
-					<span class="icon"></span>
-					<span class="text">Camps</span>
-				</div>
-				<div class="item testimony testimony_written" data-types="picture,document">
-					<input type="checkbox" class="chkbox" checked/>
-					<span class="icon"></span>
-					<span class="text twolines">Pictures & Documents</span>
-				</div>
-				<div class="item testimony testimony_video" data-types="video">
-					<input type="checkbox" class="chkbox" checked/>
-					<span class="icon"></span>
-					<span class="text twolines">Video Testimonies</span>
-				</div>
-				<div class="item testimony testimony_audio" data-types="audio">
-					<input type="checkbox" class="chkbox" checked/>
-					<span class="icon"></span>
-					<span class="text twolines">Audio Testimonies</span>
-				</div>
-				<div class="item resistance" data-types="resistance">
-					<input type="checkbox" class="chkbox" checked/>
-					<span class="icon"></span>
-					<span class="text twolines">Jewish Resistance</span>
-				</div>
-				<div class="item righteous" data-types="righteous">
-					<input type="checkbox" class="chkbox" checked/>
-					<span class="icon"></span>
-					<span class="text">Righteous</span>
-				</div>
-				<div class="item allied" data-types="allied">
-					<input type="checkbox" class="chkbox" checked/>
-					<span class="icon"></span>
-					<span class="text twolines">Allied Forces</span>				
+					<span class="text" ng-class="{'two-lines': filter.isLongText}">{{filter.text}}</span>
 				</div>
 			</div>
 			<div id="top">
