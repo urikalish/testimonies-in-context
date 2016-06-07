@@ -24,10 +24,28 @@ body {
 }
 
 #top {
-	width: 930px;
-	height: 578px;
-	padding-left: 95px;
-	padding-top: 60px;
+}
+
+#header {
+	width:1024px;
+	height:60px;
+	background:url('header.png');
+	border-bottom:1px solid #fff;
+}
+
+#middle {
+	display: flex;
+}
+
+#sidebar {
+	flex: 0 0 95px;
+	position: relative;
+	height: 518px;
+    background-color: #fff;
+}
+
+#map-container {
+	flex: 0 0 929px;
 }
 
 #map {
@@ -130,22 +148,6 @@ body {
 	margin-left: 20px;
 	color: #333;
 	cursor: pointer;
-}
-
-#header {
-	width:1024px;
-	height:60px;
-	position:absolute;
-	background:url('header.png');
-	border-bottom:1px solid #fff;
-}
-
-#sidebar {
-	width:95px;
-	position:absolute;
-	height: 518px;
-	top:60px;
-	background-color:#fff;
 }
 
 .sidebar__item {
