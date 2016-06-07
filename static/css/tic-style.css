@@ -42,7 +42,7 @@ body {
 	height: 25px;
 	line-height: 25px;
 	margin-top: -24px;
-	font-family: arial;
+	font-family: Arial sans-serif;
 	font-size: 14px;
 }
 
@@ -51,7 +51,7 @@ body {
 	vertical-align: middle;
 }
 
-#date {
+#date-text {
 	color: white;
 }
 
@@ -61,13 +61,13 @@ body {
 	background:url('timeline.png');
 }
 
-#range {
+#date-slider {
 	width: 1014px;
 	margin-left: 8px;
 	margin-top: 24px;
 }
 
-.infowindow-eye {
+.info-window-eye {
 	float: right;
 	margin-right: 25px;
 	margin-top: -20px;
@@ -75,48 +75,48 @@ body {
 	cursor: pointer;
 }
 
-.infowindow-bookmark {
+.info-window-bookmark {
 	float: right;
 	margin-top: -20px;
 	margin-bottom: 4px;
 	cursor: pointer;
 }
 
-.infowindow-content {
+.info-window-content {
 	position: relative;
 }
 
-.infowindow-left {
+.info-window-left {
 	display: inline-block;
 	position: absolute;
 	left:  20px;
 	top: 50%;
 }
 
-.infowindow-right {
+.info-window-right {
 	display: inline-block;
 	position: absolute;
 	right: 0;
 	top: 50%;
 }
 
-.infowindow-image {
+.info-window-image {
 	width: 380px;
 	display: inline-block;
 	margin-left: 20px;
 }
 
-.infowindow-video {
+.info-window-video {
 	width: 300px;
 	margin-left: 20px;
 }
 
-.infowindow-audio {
+.info-window-audio {
 	width: 300px;
 	margin-left: 20px;
 }
 
-.infowindow-text {
+.info-window-text {
 	display: inline-block;
 	margin-left: 20px;
 	color: #333;
@@ -125,7 +125,7 @@ body {
 	margin-top: 10px;
 }
 
-.infowindow-related {
+.info-window-related {
 	margin-top: 20px;
 	margin-left: 20px;
 	color: #333;
@@ -148,7 +148,7 @@ body {
 	background-color:#fff;
 }
 
-#sidebar .item {
+.sidebar__item {
 	width:95px;
 	height:61px;
 	background-color:#dedbdb;
@@ -159,39 +159,39 @@ body {
 	cursor:pointer;
 }
 
-#sidebar .item.ghetto:hover {
+.sidebar__item.ghetto:hover {
 	background-color:#cdab37;
 }
 
-#sidebar .item.camps:hover {
+.sidebar__item.camp:hover {
 	background-color:#b2ad65;
 }
 
-#sidebar .item.testimony-written:hover {
+.sidebar__item.testimony-written:hover {
 	background-color:#35b18a;
 }
 
-#sidebar .item.testimony-video:hover {
+.sidebar__item.testimony-video:hover {
 	background-color:#35b18a;
 }
 
-#sidebar .item.testimony-audio:hover {
+.sidebar__item.testimony-audio:hover {
 	background-color:#35b18a;
 }
 
-#sidebar .item.resistance:hover {
+.sidebar__item.resistance:hover {
 	background-color:#db975a;
 }
 
-#sidebar .item.righteous:hover {
+.sidebar__item.righteous:hover {
 	background-color:#6c9b98;
 }
 
-#sidebar .item.allied:hover {
+.sidebar__item.allied:hover {
 	background-color:#dd5e49;
 }
 
-#sidebar .item .icon {
+.sidebar__item__icon {
     background: url('sprite-sidebar_icons.png');
     width: 34px;
     height: 38px;
@@ -201,116 +201,116 @@ body {
 	background-position-y: -54px;
 }
 
-#sidebar .item .chkbox {
+.sidebar__item__checkbox {
 	position:absolute;
 	left:0;
 	top:0;
 	display:none;
 }
 
-#sidebar .item .chkbox:checked + .icon {
+.sidebar__item__checkbox:checked + .sidebar__item__icon {
 	background-position-y: -154px;
 }
 
-#sidebar .item:hover .chkbox:checked + .icon ,
-#sidebar .item:hover .icon {
+.sidebar__item:hover .sidebar__item__checkbox:checked + .sidebar__item__icon ,
+.sidebar__item:hover .sidebar__item__icon {
 	 background-position-y: -104px;
 }
 
-#sidebar .item:hover .text {
+.sidebar__item:hover .sidebar__item__text {
 	display:inline-block;
 }
 
-#sidebar .item .text {
+.sidebar__item__text {
 	display: none;
 	position:absolute;
     vertical-align: top;
     margin-top: 18px;
     font-size: 20px;
-    font-family: Arial;
+    font-family: Arial sans-serif;
     margin-left: 12px;
 	padding-right:20px;
 }
 
-#sidebar .item .text.two-lines {
+.sidebar__item__text.two-lines {
 	margin-top:8px;
 }
 
-#sidebar .item.allied .text {
+.sidebar__item.allied .sidebar__item__text {
 	padding-right:48px;
 }
 
-#sidebar .item.ghetto {
+.sidebar__item.ghetto {
 	top:0;
 }
 
-#sidebar .item.ghetto .icon {
+.sidebar__item.ghetto .sidebar__item__icon {
 	background-position-x: -8px;
 }
 
-#sidebar .item.camps {
+.sidebar__item.camp {
 	top:65px;
 }
 
-#sidebar .item.camps .icon {
+.sidebar__item.camp .sidebar__item__icon {
 	background-position-x: -56px;
     width: 38px;
 }
 
-#sidebar .item.testimony-written {
+.sidebar__item.testimony-written {
 	top:130px;
 }
 
-#sidebar .item.testimony-written .icon {
+.sidebar__item.testimony-written .sidebar__item__icon {
     background-position-x: -107px;
     width: 35px;
 }
 
-#sidebar .item.testimony-video {
+.sidebar__item.testimony-video {
 	top:195px;
 }
 
-#sidebar .item.testimony-video .icon {
+.sidebar__item.testimony-video .sidebar__item__icon {
 	background-position-x: -160px;
     width: 30px;
 }
 
-#sidebar .item.testimony-audio {
+.sidebar__item.testimony-audio {
 	top:260px;
 }
 
-#sidebar .item.testimony-audio .icon {
+.sidebar__item.testimony-audio .sidebar__item__icon {
 	background-position-x: -209px;
     width: 34px;
 }
 
-#sidebar .item.resistance {
+.sidebar__item.resistance {
 	top:325px;
 }
 
-#sidebar .item.resistance .icon {
+.sidebar__item.resistance .sidebar__item__icon {
 	background-position-x: -258px;
     width: 34px;
 }
 
-#sidebar .item.righteous {
+.sidebar__item.righteous {
 	top:390px;
 }
 
-#sidebar .item.righteous .icon {
+.sidebar__item.righteous .sidebar__item__icon {
 	background-position-x: -308px;
     width: 34px;
 }
 
-#sidebar .item.allied {
+.sidebar__item.allied {
 	top:455px;
 }
 
-#sidebar .item.allied .icon {
+.sidebar__item.allied .sidebar__item__icon {
 	background-position-x: -358px;
     width: 34px;
 }
 
-#sidebar .item:hover {
+.sidebar__item:hover {
 	width:210px;
 }

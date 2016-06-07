@@ -16,21 +16,21 @@
 			<div id="header"></div>
 			<div id="sidebar">
 				<div class="bg"></div>
-				<div ng-repeat="filter in model.filters" class="item {{filter.classStr}}" data-types="{{filter.dataTypes}}">
-					<input type="checkbox" class="chkbox" checked/>
-					<span class="icon"></span>
-					<span class="text" ng-class="{'two-lines': filter.isLongText}">{{filter.text}}</span>
+				<div ng-repeat="filter in model.filters" data-types="{{filter.dataTypes}}" class="sidebar__item {{filter.classStr}}">
+					<input type="checkbox" class="sidebar__item__checkbox" checked/>
+					<span class="sidebar__item__icon"></span>
+					<span class="sidebar__item__text" ng-class="{'two-lines': filter.isLongText}">{{filter.text}}</span>
 				</div>
 			</div>
 			<div id="top">
 				<div id="map"></div>
 				<div id="map-down-panel">
 					<img id="play-btn" src="img/play.png"/>
-					<span id="date"></span>
+					<span id="date-text"></span>
 				</div>
 			</div>
 			<div id="bottom">
-				<input id="range" type="range" min="0" max="117" step="1" value="0"/>
+				<input id="date-slider" type="range" min="0" max="117" step="1" value="0"/>
 			</div>
 		</div>
 	</body>
