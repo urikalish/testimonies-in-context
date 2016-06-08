@@ -106,7 +106,6 @@ body {
 	background-position-y: -154px;
 }
 
-.tic-sidebar__item:hover .tic-sidebar__item__checkbox:checked + .tic-sidebar__item__icon,
 .tic-sidebar__item:hover .tic-sidebar__item__icon {
 	 background-position-y: -104px;
 }
