@@ -9,7 +9,7 @@ var markers = [];
 
 function initMap() {
 	map = new google.maps.Map(
-		document.getElementById('map'),
+		document.getElementById('google-map'),
 		{
 			center: new google.maps.LatLng(49, 14.5),
 			zoom: 5,
@@ -28,7 +28,7 @@ function onDateChange(value) {
 	var year = Math.trunc(value / 12) + 1936;
 	var month = value % 12 + 1;
 	curDateStr = monthNames[month - 1] + ' ' + year;
-	$('#date-text')[0].innerHTML = curDateStr;
+	$('#tic-map__bottom-panel__text')[0].innerHTML = curDateStr;
 	var fromDate = year + (month < 10 ? '0' : '') + month + '01';
 	var toDate = year + (month < 10 ? '0' : '') + month + '31';
 	getMarkers(fromDate, toDate);
@@ -78,7 +78,7 @@ function onServerResponse(response) {
 	for (i=0; i<eventsData.length; i++) {
 		dateText += (' - ' + eventsData[i].text);
 	}
-	$('#date-text')[0].innerHTML = dateText;
+	$('#tic-map__bottom-panel__text')[0].innerHTML = dateText;
 }
 
 function addMarker(data) {
@@ -142,7 +142,7 @@ function ShowAuswitch() {
 function ShowLoationInStreetView(lat, lon) {
 	var fenway = {'lat': lat, 'lng': lon};
 	var panorama = new google.maps.StreetViewPanorama(
-		document.getElementById('map'), {
+		document.getElementById('google-map'), {
 			position: fenway,
 			pov: {
 				heading: 34,

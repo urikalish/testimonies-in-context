@@ -11,17 +11,17 @@ body {
 	margin: 0;
 	padding: 0;
 	background: #333;
-	color: white;	
+	color: #fff;
 }
 
-.main-div {
+.tic-container {
 	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.tic-div {
+.tic-main {
 	flex: 0 0 auto;
 	width: 1024px;
 	height: 768px;
@@ -39,23 +39,23 @@ body {
 	display: flex;
 }
 
-.sidebar {
+.tic-sidebar {
 	flex: 0 0 95px;
 	position: relative;
 	height: 518px;
     background-color: #fff;
 }
 
-.map-container {
+.tic-map {
 	flex: 0 0 929px;
 }
 
-.map {
+.google-map {
 	width: 929px;
 	height: 517px;
 }
 
-.map-info-panel {
+.tic-map__bottom-panel {
 	position: relative;
 	background: #5797a0;
 	width: 929px;
@@ -66,12 +66,12 @@ body {
 	font-size: 14px;
 }
 
-.play-btn {
+.tic-map__bottom-panel__play-btn {
 	margin: -1px 25px 0 25px;
 	vertical-align: middle;
 }
 
-.date-text {
+.tic-map__bottom-panel__text {
 	color: white;
 }
 
@@ -152,7 +152,7 @@ body {
 	cursor: pointer;
 }
 
-.sidebar__item {
+.tic-sidebar__item {
 	width:95px;
 	height:61px;
 	background-color:#dedbdb;
@@ -163,39 +163,39 @@ body {
 	cursor:pointer;
 }
 
-.sidebar__item.ghetto:hover {
+.tic-sidebar__item.ghetto:hover {
 	background-color:#cdab37;
 }
 
-.sidebar__item.camp:hover {
+.tic-sidebar__item.camp:hover {
 	background-color:#b2ad65;
 }
 
-.sidebar__item.testimony-written:hover {
+.tic-sidebar__item.testimony-written:hover {
 	background-color:#35b18a;
 }
 
-.sidebar__item.testimony-video:hover {
+.tic-sidebar__item.testimony-video:hover {
 	background-color:#35b18a;
 }
 
-.sidebar__item.testimony-audio:hover {
+.tic-sidebar__item.testimony-audio:hover {
 	background-color:#35b18a;
 }
 
-.sidebar__item.resistance:hover {
+.tic-sidebar__item.resistance:hover {
 	background-color:#db975a;
 }
 
-.sidebar__item.righteous:hover {
+.tic-sidebar__item.righteous:hover {
 	background-color:#6c9b98;
 }
 
-.sidebar__item.allied:hover {
+.tic-sidebar__item.allied:hover {
 	background-color:#dd5e49;
 }
 
-.sidebar__item__icon {
+.tic-sidebar__item__icon {
     background: url('sprite-sidebar_icons.png');
     width: 34px;
     height: 38px;
@@ -205,27 +205,27 @@ body {
 	background-position-y: -54px;
 }
 
-.sidebar__item__checkbox {
+.tic-sidebar__item__checkbox {
 	position:absolute;
 	left:0;
 	top:0;
 	display:none;
 }
 
-.sidebar__item__checkbox:checked + .sidebar__item__icon {
+.tic-sidebar__item__checkbox:checked + .tic-sidebar__item__icon {
 	background-position-y: -154px;
 }
 
-.sidebar__item:hover .sidebar__item__checkbox:checked + .sidebar__item__icon ,
-.sidebar__item:hover .sidebar__item__icon {
+.tic-sidebar__item:hover .tic-sidebar__item__checkbox:checked + .tic-sidebar__item__icon ,
+.tic-sidebar__item:hover .tic-sidebar__item__icon {
 	 background-position-y: -104px;
 }
 
-.sidebar__item:hover .sidebar__item__text {
+.tic-sidebar__item:hover .tic-sidebar__item__text {
 	display:inline-block;
 }
 
-.sidebar__item__text {
+.tic-sidebar__item__text {
 	display: none;
 	position:absolute;
     vertical-align: top;
@@ -236,85 +236,85 @@ body {
 	padding-right:20px;
 }
 
-.sidebar__item__text.two-lines {
+.tic-sidebar__item__text.two-lines {
 	margin-top:8px;
 }
 
-.sidebar__item.allied .sidebar__item__text {
+.tic-sidebar__item.allied .tic-sidebar__item__text {
 	padding-right:48px;
 }
 
-.sidebar__item.ghetto {
+.tic-sidebar__item.ghetto {
 	top:0;
 }
 
-.sidebar__item.ghetto .sidebar__item__icon {
+.tic-sidebar__item.ghetto .tic-sidebar__item__icon {
 	background-position-x: -8px;
 }
 
-.sidebar__item.camp {
+.tic-sidebar__item.camp {
 	top:65px;
 }
 
-.sidebar__item.camp .sidebar__item__icon {
+.tic-sidebar__item.camp .tic-sidebar__item__icon {
 	background-position-x: -56px;
     width: 38px;
 }
 
-.sidebar__item.testimony-written {
+.tic-sidebar__item.testimony-written {
 	top:130px;
 }
 
-.sidebar__item.testimony-written .sidebar__item__icon {
+.tic-sidebar__item.testimony-written .tic-sidebar__item__icon {
     background-position-x: -107px;
     width: 35px;
 }
 
-.sidebar__item.testimony-video {
+.tic-sidebar__item.testimony-video {
 	top:195px;
 }
 
-.sidebar__item.testimony-video .sidebar__item__icon {
+.tic-sidebar__item.testimony-video .tic-sidebar__item__icon {
 	background-position-x: -160px;
     width: 30px;
 }
 
-.sidebar__item.testimony-audio {
+.tic-sidebar__item.testimony-audio {
 	top:260px;
 }
 
-.sidebar__item.testimony-audio .sidebar__item__icon {
+.tic-sidebar__item.testimony-audio .tic-sidebar__item__icon {
 	background-position-x: -209px;
     width: 34px;
 }
 
-.sidebar__item.resistance {
+.tic-sidebar__item.resistance {
 	top:325px;
 }
 
-.sidebar__item.resistance .sidebar__item__icon {
+.tic-sidebar__item.resistance .tic-sidebar__item__icon {
 	background-position-x: -258px;
     width: 34px;
 }
 
-.sidebar__item.righteous {
+.tic-sidebar__item.righteous {
 	top:390px;
 }
 
-.sidebar__item.righteous .sidebar__item__icon {
+.tic-sidebar__item.righteous .tic-sidebar__item__icon {
 	background-position-x: -308px;
     width: 34px;
 }
 
-.sidebar__item.allied {
+.tic-sidebar__item.allied {
 	top:455px;
 }
 
-.sidebar__item.allied .sidebar__item__icon {
+.tic-sidebar__item.allied .tic-sidebar__item__icon {
 	background-position-x: -358px;
     width: 34px;
 }
 
-.sidebar__item:hover {
+.tic-sidebar__item:hover {
 	width:210px;
 }
