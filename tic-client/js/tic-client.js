@@ -1,99 +1,25 @@
-var ticApp = angular.module('ticApp', []);
-
-ticApp.controller('ticController', function ticController($scope) {
-	$scope.model = {
-		entities: [
-			{
-				text: 'Jewish Ghettos',
-				isLongText: true,
-				dataTypes: 'ghetto',
-				classStr: 'ghetto',
-				isActive: true
-			},
-			{
-				text: 'Camps',
-				isLongText: false,
-				dataTypes: 'camp',
-				classStr: 'camp',
-				isActive: true
-			},
-			{
-				text: 'Pictures & Documents',
-				isLongText: true,
-				dataTypes: 'picture,document',
-				classStr: 'testimony-written',
-				isActive: true
-			},
-			{
-				text: 'Video Testimonies',
-				isLongText: true,
-				dataTypes: 'video',
-				classStr: 'testimony-video',
-				isActive: true
-			},
-			{
-				text: 'Audio Testimonies',
-				isLongText: true,
-				dataTypes: 'audio',
-				classStr: 'testimony-audio',
-				isActive: true
-			},
-			{
-				text: 'Jewish Resistance',
-				isLongText: true,
-				dataTypes: 'resistance',
-				classStr: 'resistance',
-				isActive: true
-			},
-			{
-				text: 'Righteous',
-				isLongText: false,
-				dataTypes: 'righteous',
-				classStr: 'righteous',
-				isActive: true
-			},
-			{
-				text: 'Allied Forces',
-				isLongText: true,
-				dataTypes: 'allied',
-				classStr: 'allied',
-				isActive: true
-			}
-		]
-	};
-});
-
 var serverUrl = 'http://localhost:1111/';
 var serverImgBaseUrl = serverUrl + 'tic/img';
 var serverApiUrl = serverUrl + 'api';
 var typesArray = ['ghetto', 'camp', 'picture','document','video', 'audio', 'resistance', 'righteous', 'allied'];
-var mapCanvas;
 var map;
 var curDateStr;
 var allMarkers;
 var markers = [];
 
-function mapsLoaded() {
-	var mapOptions;
-	mapCanvas = document.getElementById('map');
-  mapOptions = {
-	center: new google.maps.LatLng(49, 14.5),
-    zoom: 5,
-    mapTypeId: google.maps.MapTypeId.TERRAIN,
-	styles: getMapStyles()
-	};
-	map = new google.maps.Map(mapCanvas, mapOptions);
+function initMap() {
+	map = new google.maps.Map(
+		document.getElementById('map'),
+		{
+			center: new google.maps.LatLng(49, 14.5),
+			zoom: 5,
+			mapTypeId: google.maps.MapTypeId.TERRAIN,
+			styles: getMapStyles()
+		}
+	);
 	onDateChange(0);
 	$('#date-slider').on('input', function() {
 		onDateChange(this.value);
-	});
-}
-
-function initialize() {
-
-	google.load('maps', '3.7', {
-		'other_params' : 'sensor=false&libraries=places&language=' + 'en',
-		'callback' : mapsLoaded
 	});
 }
 
@@ -225,5 +151,3 @@ function ShowLoationInStreetView(lat, lon) {
 		});
 	map.setStreetView(panorama);
 }
-
-google.maps.event.addDomListener(window, 'load', initialize);
