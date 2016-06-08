@@ -113,10 +113,10 @@ function addMarker(data) {
 }
 
 $(function() {
-	$('.sidebar__item').click(function() {
+	$('.tic-sidebar__item').click(function() {
 		var i;
 		var types = ($(this).attr('data-types')).split(',');
-		var element = $(this).find('.sidebar__item__checkbox');
+		var element = $(this).find('.tic-sidebar__item__checkbox');
 		if (element.prop('checked'))
 		{
 			// remove

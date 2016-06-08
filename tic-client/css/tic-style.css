@@ -14,14 +14,14 @@ body {
 	color: #fff;
 }
 
-.tic-container {
+.tic-main {
 	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.tic-main {
+.tic-container {
 	flex: 0 0 auto;
 	width: 1024px;
 	height: 768px;
@@ -46,9 +46,9 @@ body {
 }
 
 .tic-sidebar__item {
-	width:95px;
-	height:61px;
-	background-color:#dedbdb;
+	width: 95px;
+	height: 62px;
+	background-color: #dedbdb;
 	z-index:10;
 	transition: all 0.4s ease;
 	margin-bottom:4px;
@@ -57,88 +57,85 @@ body {
 }
 
 .tic-sidebar__item.ghetto:hover {
-	background-color:#cdab37;
+	background-color: #cdab37;
 }
 
 .tic-sidebar__item.camp:hover {
-	background-color:#b2ad65;
+	background-color: #b2ad65;
 }
 
 .tic-sidebar__item.testimony-written:hover {
-	background-color:#35b18a;
+	background-color: #35b18a;
 }
 
 .tic-sidebar__item.testimony-video:hover {
-	background-color:#35b18a;
+	background-color: #35b18a;
 }
 
 .tic-sidebar__item.testimony-audio:hover {
-	background-color:#35b18a;
+	background-color: #35b18a;
 }
 
 .tic-sidebar__item.resistance:hover {
-	background-color:#db975a;
+	background-color: #db975a;
 }
 
 .tic-sidebar__item.righteous:hover {
-	background-color:#6c9b98;
+	background-color: #6c9b98;
 }
 
 .tic-sidebar__item.allied:hover {
-	background-color:#dd5e49;
-}
-
-.tic-sidebar__item__icon {
-    background: url('sprite-sidebar_icons.png');
-    width: 34px;
-    height: 38px;
-    display: inline-block;
-	margin-top:10px;
-	margin-left:28px;
-	background-position-y: -54px;
+	background-color: #dd5e49;
 }
 
 .tic-sidebar__item__checkbox {
-	position:absolute;
-	left:0;
-	top:0;
-	display:none;
+	display: none;
+}
+
+.tic-sidebar__item__icon {
+	display: inline-block;
+	background: url('sprite-sidebar_icons.png');
+    width: 34px;
+    height: 38px;
+	margin-top: 12px;
+	margin-left: 28px;
+	background-position-y: -54px;
 }
 
 .tic-sidebar__item__checkbox:checked + .tic-sidebar__item__icon {
 	background-position-y: -154px;
 }
 
-.tic-sidebar__item:hover .tic-sidebar__item__checkbox:checked + .tic-sidebar__item__icon ,
+.tic-sidebar__item:hover .tic-sidebar__item__checkbox:checked + .tic-sidebar__item__icon,
 .tic-sidebar__item:hover .tic-sidebar__item__icon {
 	 background-position-y: -104px;
 }
 
 .tic-sidebar__item:hover .tic-sidebar__item__text {
-	display:inline-block;
+	display: inline-block;
 }
 
 .tic-sidebar__item__text {
 	display: none;
-	position:absolute;
+	position: absolute;
     vertical-align: top;
     margin-top: 18px;
     font-size: 20px;
     font-family: Arial sans-serif;
     margin-left: 12px;
-	padding-right:20px;
+	padding-right: 20px;
 }
 
 .tic-sidebar__item__text.two-lines {
-	margin-top:8px;
+	margin-top: 8px;
 }
 
 .tic-sidebar__item.allied .tic-sidebar__item__text {
-	padding-right:48px;
+	padding-right: 48px;
 }
 
 .tic-sidebar__item.ghetto {
-	top:0;
+	top: 0;
 }
 
 .tic-sidebar__item.ghetto .tic-sidebar__item__icon {
@@ -146,7 +143,7 @@ body {
 }
 
 .tic-sidebar__item.camp {
-	top:65px;
+	top: 65px;
 }
 
 .tic-sidebar__item.camp .tic-sidebar__item__icon {
@@ -155,7 +152,7 @@ body {
 }
 
 .tic-sidebar__item.testimony-written {
-	top:130px;
+	top: 130px;
 }
 
 .tic-sidebar__item.testimony-written .tic-sidebar__item__icon {
@@ -164,7 +161,7 @@ body {
 }
 
 .tic-sidebar__item.testimony-video {
-	top:195px;
+	top: 195px;
 }
 
 .tic-sidebar__item.testimony-video .tic-sidebar__item__icon {
@@ -173,7 +170,7 @@ body {
 }
 
 .tic-sidebar__item.testimony-audio {
-	top:260px;
+	top: 260px;
 }
 
 .tic-sidebar__item.testimony-audio .tic-sidebar__item__icon {
@@ -182,7 +179,7 @@ body {
 }
 
 .tic-sidebar__item.resistance {
-	top:325px;
+	top: 325px;
 }
 
 .tic-sidebar__item.resistance .tic-sidebar__item__icon {
@@ -191,7 +188,7 @@ body {
 }
 
 .tic-sidebar__item.righteous {
-	top:390px;
+	top: 390px;
 }
 
 .tic-sidebar__item.righteous .tic-sidebar__item__icon {
@@ -200,7 +197,7 @@ body {
 }
 
 .tic-sidebar__item.allied {
-	top:455px;
+	top: 455px;
 }
 
 .tic-sidebar__item.allied .tic-sidebar__item__icon {
@@ -209,7 +206,7 @@ body {
 }
 
 .tic-sidebar__item:hover {
-	width:210px;
+	width: 210px;
 }
 
 .tic-map {
@@ -243,7 +240,7 @@ body {
 .info-window-left {
 	display: inline-block;
 	position: absolute;
-	left:  20px;
+	left: 20px;
 	top: 50%;
 }
 
@@ -308,7 +305,7 @@ body {
 .tic-bottom {
 	width: 1024px;
 	height: 190px;
-	background:url('timeline.png');
+	background: url('timeline.png');
 }
 
 .date-slider {
