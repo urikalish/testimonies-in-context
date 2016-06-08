@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "node app.js"
+    "start": "node tic-server/tic-server.js"
   },
   "dependencies": {
     "express": "~4.10.7",

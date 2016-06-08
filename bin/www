@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 var debug = require('debug')('tic');
-var app = require('../app');
+var app = require('../tic-server');
 app.set('port', process.env.PORT || 1111);
 var server = app.listen(app.get('port'), function() {
   console.log('tic Server listening on port ' + server.address().port);
