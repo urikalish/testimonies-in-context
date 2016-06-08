@@ -1,12 +1,12 @@
 {
-  "name": "tic",
+  "name": "testimonies-in-context",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "node tic-server/tic-server.js"
   },
   "dependencies": {
-    "express": "~4.10.7",
-    "body-parser": "~1.14.1"
+    "express": "~4.13.4",
+    "body-parser": "~1.15.1"
   }
 }
