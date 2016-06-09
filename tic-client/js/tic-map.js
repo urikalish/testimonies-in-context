@@ -1,7 +1,7 @@
 var map = null;
 var markers = [];
 
-function onInitMap() {
+function initMap() {
   map = new google.maps.Map(
     document.getElementById('google-map'),
     {
@@ -11,8 +11,6 @@ function onInitMap() {
       styles: getMapStyles()
     }
   );
-  onDateChange(0);
-  registerDateChangeListener();
 }
 
 function removeAllMarkers() {

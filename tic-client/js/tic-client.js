@@ -1,3 +1,9 @@
+function onGoogleInit() {
+	initMap();
+	onDateChange(0);
+	registerDateChangeListener();
+}
+
 function sendServerRequest(from, to) {
 	$.post(serverApiUrl,{from: from, to: to}, function(response){
 		onServerResponse(response);
