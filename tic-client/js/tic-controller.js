@@ -1,9 +1,36 @@
-var ticApp = angular.module('ticApp', []);
+angular.module('ticApp', []).controller('ticController', function ticController($scope) {
 
-ticApp.controller('ticController', function ticController($scope) {
+  function onItemClick(id) {
+    var i, j, found, entity, dataTypes = [];
+    for (i = 0; i < $scope.model.entities.length; i++) {
+      entity = $scope.model.entities[i];
+      if (!found && entity.id === id) {
+        found = true;
+        entity.isActive = !entity.isActive;
+      }
+    }
+    updateVisibleTypes();
+    UpdateMarkers();
+  }
+
+  function updateVisibleTypes() {
+    var i, j, entity, dataTypes;
+    visibleTypes = [];
+    for (i = 0; i < $scope.model.entities.length; i++) {
+      entity = $scope.model.entities[i];
+      if (entity.isActive) {
+        dataTypes = entity.dataTypes.split(',');
+        for (j = 0; j < dataTypes.length; j++) {
+          visibleTypes.push(dataTypes[j]);
+        }
+      }
+    }
+  }
+
   $scope.model = {
     entities: [
       {
+        id: 'ghetto',
         text: 'Jewish Ghettos',
         isLongText: true,
         dataTypes: 'ghetto',
@@ -11,6 +38,7 @@ ticApp.controller('ticController', function ticController($scope) {
         isActive: true
       },
       {
+        id: 'camp',
         text: 'Camps',
         isLongText: false,
         dataTypes: 'camp',
@@ -18,6 +46,7 @@ ticApp.controller('ticController', function ticController($scope) {
         isActive: true
       },
       {
+        id: 'picsAndDocs',
         text: 'Pictures & Documents',
         isLongText: true,
         dataTypes: 'picture,document',
@@ -25,6 +54,7 @@ ticApp.controller('ticController', function ticController($scope) {
         isActive: true
       },
       {
+        id: 'video',
         text: 'Video Testimonies',
         isLongText: true,
         dataTypes: 'video',
@@ -32,6 +62,7 @@ ticApp.controller('ticController', function ticController($scope) {
         isActive: true
       },
       {
+        id: 'audio',
         text: 'Audio Testimonies',
         isLongText: true,
         dataTypes: 'audio',
@@ -39,6 +70,7 @@ ticApp.controller('ticController', function ticController($scope) {
         isActive: true
       },
       {
+        id: 'resistance',
         text: 'Jewish Resistance',
         isLongText: true,
         dataTypes: 'resistance',
@@ -46,6 +78,7 @@ ticApp.controller('ticController', function ticController($scope) {
         isActive: true
       },
       {
+        id: 'righteous',
         text: 'Righteous',
         isLongText: false,
         dataTypes: 'righteous',
@@ -53,6 +86,7 @@ ticApp.controller('ticController', function ticController($scope) {
         isActive: true
       },
       {
+        id: 'allied',
         text: 'Allied Forces',
         isLongText: true,
         dataTypes: 'allied',
@@ -61,4 +95,9 @@ ticApp.controller('ticController', function ticController($scope) {
       }
     ]
   };
+
+  $scope.onItemClick = onItemClick;
+
+  updateVisibleTypes();
+
 });

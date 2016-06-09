@@ -1,5 +1,5 @@
 function getMapStyles() {
-  var styles = [
+  return [
     {
       'featureType':'administrative.country',
       'elementType':'labels',
@@ -328,5 +328,4 @@ function getMapStyles() {
       ]
     }
   ];
-  return styles;
 }

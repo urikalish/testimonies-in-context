@@ -99,11 +99,11 @@ body {
     height: 38px;
 	margin-top: 12px;
 	margin-left: 28px;
-	background-position-y: -54px;
+	background-position-y: -154px;
 }
 
-.tic-sidebar__item__checkbox:checked + .tic-sidebar__item__icon {
-	background-position-y: -154px;
+.tic-sidebar__item__icon--disabled {
+	background-position-y: -54px;
 }
 
 .tic-sidebar__item:hover .tic-sidebar__item__icon {

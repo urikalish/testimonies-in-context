@@ -1,10 +1,4 @@
-var serverUrl = 'http://localhost:1111/';
-
-var serverImgBaseUrl = serverUrl + 'tic/img';
-
-var serverApiUrl = serverUrl + 'api';
-
-var typesArray = ['ghetto', 'camp', 'picture','document','video', 'audio', 'resistance', 'righteous', 'allied'];
+var visibleTypes = [];
 
 var ctrlSelector = {
   SIDEBAR_ITEM: '.tic-sidebar__item',
@@ -16,4 +10,3 @@ var ctrlSelector = {
 var ctrlIds = {
   GOOGLE_MAP: 'google-map'
 };
-

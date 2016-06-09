@@ -24,21 +24,21 @@ function removeAllMarkers() {
   markers.length = 0;
 }
 
-function FilterMarkers(allMarkers) {
+function filterMarkers(allMarkers, visibleTypes) {
   return _.filter(allMarkers, function(item) {
-    return _.indexOf(typesArray, item.type) > -1
+    return _.indexOf(visibleTypes, item.type) > -1
   });
 }
 
 function UpdateMarkers() {
   removeAllMarkers();
-  var markersData = FilterMarkers(allMarkers);
+  var markersData = filterMarkers(allMarkers, visibleTypes);
   for (var i=0; i<markersData.length; i++) {
     addMarker(markersData[i]);
   }
 }
 
-function ShowLoationInStreetView(lat, lon) {
+function showLoationInStreetView(lat, lon) {
   var fenway = {'lat': lat, 'lng': lon};
   var panorama = new google.maps.StreetViewPanorama(
     document.getElementById(ctrlIds.GOOGLE_MAP), {
@@ -52,7 +52,7 @@ function ShowLoationInStreetView(lat, lon) {
 }
 
 function ShowAuswitch() {
-  ShowLoationInStreetView(50.037141, 19.180081);
+  showLoationInStreetView(50.037141, 19.180081);
 }
 
 function addMarker(data) {

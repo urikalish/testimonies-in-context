@@ -10,7 +10,7 @@
 		<script src="lib/jquery-2.2.4.min.js"></script>
 		<script src="lib/angular.min.js"></script>
 		<script src="js/tic-common.js"></script>
-		<script src="js/map-style.js"></script>
+		<script src="js/tic-map-style.js"></script>
 		<script src="js/tic-map.js"></script>
 		<script src="js/tic-map-panel.js"></script>
 		<script src="js/tic-date.js"></script>
@@ -25,9 +25,8 @@
 				</div>
 				<div class="tic-middle">
 					<div class="tic-sidebar">
-						<div ng-repeat="entity in model.entities" data-types="{{entity.dataTypes}}" class="tic-sidebar__item {{entity.classStr}}">
-							<input type="checkbox" class="tic-sidebar__item__checkbox" checked/>
-							<span class="tic-sidebar__item__icon"></span>
+						<div ng-repeat="entity in model.entities" data-types="{{entity.dataTypes}}" class="tic-sidebar__item {{entity.classStr}}" ng-click="onItemClick(entity.id)">
+							<span class="tic-sidebar__item__icon" ng-class="{'tic-sidebar__item__icon--disabled': !entity.isActive}"></span>
 							<span class="tic-sidebar__item__text" ng-class="{'two-lines': entity.isLongText}">{{entity.text}}</span>
 						</div>
 					</div>
