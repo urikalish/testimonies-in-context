@@ -1,5 +1,3 @@
-var curDateStr;
-
 function registerDateChangeListener() {
   $(ctrlSelector.DATE_SLIDER).on('input', function() {
     onDateChange(this.value);

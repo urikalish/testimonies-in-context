@@ -1,30 +1,28 @@
 angular.module('ticApp', []).controller('ticController', function ticController($scope) {
 
-  function onItemClick(id) {
-    var i, j, found, entity, dataTypes = [];
-    for (i = 0; i < $scope.model.entities.length; i++) {
-      entity = $scope.model.entities[i];
-      if (!found && entity.id === id) {
-        found = true;
-        entity.isActive = !entity.isActive;
+  function updateVisibleTypes() {
+    var dataTypes, activeTypes = [];
+    _.forEach($scope.model.entities, function(e) {
+      if (e.isActive) {
+        dataTypes = e.dataTypes.split(',');
+        _.forEach(dataTypes, function(dt) {
+          activeTypes.push(dt);
+        });
       }
-    }
-    updateVisibleTypes();
-    UpdateMarkers();
+    });
+    visibleTypes = activeTypes;
   }
 
-  function updateVisibleTypes() {
-    var i, j, entity, dataTypes;
-    visibleTypes = [];
-    for (i = 0; i < $scope.model.entities.length; i++) {
-      entity = $scope.model.entities[i];
-      if (entity.isActive) {
-        dataTypes = entity.dataTypes.split(',');
-        for (j = 0; j < dataTypes.length; j++) {
-          visibleTypes.push(dataTypes[j]);
-        }
+  function onItemClick(id) {
+    var found;
+    _.forEach($scope.model.entities, function(e) {
+      if (!found && e.id === id) {
+        found = true;
+        e.isActive = !e.isActive;
       }
-    }
+    });
+    updateVisibleTypes();
+    updateMarkers(markersData, visibleTypes);
   }
 
   $scope.model = {

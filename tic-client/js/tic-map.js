@@ -1,5 +1,4 @@
 var map = null;
-var allMarkers = [];
 var markers = [];
 
 function onInitMap() {
@@ -17,25 +16,24 @@ function onInitMap() {
 }
 
 function removeAllMarkers() {
-  var i;
-  for (i = 0; i < markers.length; i++) {
-    markers[i].setMap(null);
-  }
+  _.forEach(markers, function(m) {
+    m.setMap(null);
+  });
   markers.length = 0;
 }
 
-function filterMarkers(allMarkers, visibleTypes) {
-  return _.filter(allMarkers, function(item) {
-    return _.indexOf(visibleTypes, item.type) > -1
+function filterMarkers(markers, types) {
+  return _.filter(markers, function(item) {
+    return _.indexOf(types, item.type) > -1
   });
 }
 
-function UpdateMarkers() {
+function updateMarkers(markersData, visibleTypes) {
   removeAllMarkers();
-  var markersData = filterMarkers(allMarkers, visibleTypes);
-  for (var i=0; i<markersData.length; i++) {
-    addMarker(markersData[i]);
-  }
+  var filteredMarkersData = filterMarkers(markersData, visibleTypes);
+  _.forEach(filteredMarkersData, function(m) {
+    markers.push(addMarker(m));
+  });
 }
 
 function showLoationInStreetView(lat, lon) {
@@ -51,13 +49,13 @@ function showLoationInStreetView(lat, lon) {
   map.setStreetView(panorama);
 }
 
-function ShowAuswitch() {
+function showAuschwitzStreetView() {
   showLoationInStreetView(50.037141, 19.180081);
 }
 
 function addMarker(data) {
   var marker, contentString, infowindow;
-  var topbarHtmlTemplate = '<div><img src="img/bookmark.png" class="info-window-bookmark"/><img src="img/eye.png" class="info-window-eye" onclick="ShowLoationInStreetView(50.037141,19.180081)"/></div>';
+  var topbarHtmlTemplate = '<div><img src="img/bookmark.png" class="info-window-bookmark"/><img src="img/eye.png" class="info-window-eye" onclick="showAuschwitzStreetView()"/></div>';
   var textHtmlTemplate = '<div class="info-window-text">' + data.text + '</div>';
   var relatedItemsHtmlTemplate = '<div class="info-window-related"><a href="">Related items</a></div>';
   if (data.type === 'video') {
@@ -82,6 +80,5 @@ function addMarker(data) {
       infowindow.open(map, marker);
     }
   });
-  markers.push(marker);
   return marker;
 }
