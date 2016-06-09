@@ -210,6 +210,7 @@ body {
 
 .tic-map {
 	flex: 0 0 929px;
+	background-color: #666;
 }
 
 .google-map {

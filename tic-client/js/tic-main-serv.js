@@ -1,7 +1,7 @@
 angular.module('ticApp').factory('ticServ', function ticServ(ticConstants, ticVariables, ticCommServ, ticMapServ) {
 
   function registerDateChangeListener() {
-    $(ticConstants.ctrlSelector.DATE_SLIDER).on('input', function() {
+    $('#' + ticConstants.ctrlId.DATE_SLIDER).on('input', function() {
       onDateChange(this.value);
     });
   }
@@ -10,7 +10,7 @@ angular.module('ticApp').factory('ticServ', function ticServ(ticConstants, ticVa
     var year = Math.trunc(value / 12) + 1936;
     var month = value % 12 + 1;
     ticVariables.curDateStr = ticConstants.monthNames[month - 1] + ' ' + year;
-    $(ticConstants.ctrlSelector.MAP_PANEL_TEXT)[0].innerHTML = ticVariables.curDateStr;
+    $('#' + ticConstants.ctrlId.MAP_PANEL_TEXT)[0].innerHTML = ticVariables.curDateStr;
     var fromDate = year + (month < 10 ? '0' : '') + month + '01';
     var toDate = year + (month < 10 ? '0' : '') + month + '31';
     getDataFromServer(fromDate, toDate, handleServerResponse);
@@ -21,7 +21,7 @@ angular.module('ticApp').factory('ticServ', function ticServ(ticConstants, ticVa
     _.forEach(eventsData, function(e) {
       mapPanelText += (', ' + e.text);
     });
-    $(ticConstants.ctrlSelector.MAP_PANEL_TEXT)[0].innerHTML = mapPanelText;
+    $('#' + ticConstants.ctrlId.MAP_PANEL_TEXT)[0].innerHTML = mapPanelText;
   }
 
   function getDataFromServer(fromDate, toDate, callback) {
