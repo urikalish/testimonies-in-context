@@ -4,9 +4,8 @@ angular.module('ticApp').factory('ticVariables', function ticVariables() {
 
     markersData: [],
     visibleTypes: [],
-    curDateStr: '',
     markers: [],
-    mapPanelText: ''
+    curDateStr: ''
   }
 
 });
