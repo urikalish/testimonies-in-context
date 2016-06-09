@@ -1,4 +1,4 @@
-angular.module('ticApp', []).controller('ticController', function ticController($scope) {
+angular.module('ticApp').controller('ticSidebarCtrl', function ticSidebarCtrl($scope, ticVariables, ticMapServ) {
 
   function updateVisibleTypes() {
     var dataTypes, activeTypes = [];
@@ -10,7 +10,7 @@ angular.module('ticApp', []).controller('ticController', function ticController(
         });
       }
     });
-    visibleTypes = activeTypes;
+    ticVariables.visibleTypes = activeTypes;
   }
 
   function onItemClick(id) {
@@ -22,7 +22,7 @@ angular.module('ticApp', []).controller('ticController', function ticController(
       }
     });
     updateVisibleTypes();
-    updateMarkers(markersData, visibleTypes);
+    ticMapServ.updateMarkers(ticVariables.markersData, ticVariables.visibleTypes);
   }
 
   $scope.model = {

@@ -293,11 +293,14 @@ body {
 }
 
 .tic-map__bottom-panel__play-btn {
-	margin: -1px 25px 0 25px;
+	position: absolute;
+	left: 20px;
+	top: 3px;
 	vertical-align: middle;
 }
 
 .tic-map__bottom-panel__text {
+	margin-left: 55px;
 	color: white;
 }
 

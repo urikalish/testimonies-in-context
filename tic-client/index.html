@@ -3,28 +3,30 @@
 		<title>Testimonies in Context</title>
 		<meta name="description" content="Testimonies in Context"/>		
 		<link rel="stylesheet" type="text/css" href="css/tic-style.css"/>
-		<script>function initMap(){setTimeout(function(){onInitMap();},1000);}{}</script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeR621oXBpqxwSEdtPBBMI5BdnqIhDSP0&callback=onGoogleInit" async defer></script>
+		<script>function initTic(){setTimeout(function(){angular.element(document.body).injector().get('ticServ').init();},3000);}</script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeR621oXBpqxwSEdtPBBMI5BdnqIhDSP0&callback=initTic" async defer></script>
 		<script src="https://www.google.com/jsapi?key=AIzaSyBeR621oXBpqxwSEdtPBBMI5BdnqIhDSP0"></script>
 		<script src="lib/lodash.js"></script>
 		<script src="lib/jquery-2.2.4.min.js"></script>
 		<script src="lib/angular.min.js"></script>
+		<script src="js/tic-main-app.js"></script>
+		<script src="js/tic-consts.js"></script>
 		<script src="js/tic-vars.js"></script>
+		<script src="js/tic-comm-serv.js"></script>
 		<script src="js/tic-map-style.js"></script>
-		<script src="js/tic-map.js"></script>
-		<script src="js/tic-map-panel.js"></script>
-		<script src="js/tic-date-slider.js"></script>
-        <script src="js/tic-client.js"></script>
-		<script src="js/tic-controller.js"></script>
+		<script src="js/tic-map-serv.js"></script>
+		<script src="js/tic-main-serv.js"></script>
+		<script src="js/tic-main-ctrl.js"></script>
+		<script src="js/tic-sidebar-ctrl.js"></script>
 	</head>
-	<body ng-controller="ticController">
+	<body ng-controller="ticCtrl">
 	    <div class="tic-main">
 			<div class="tic-container">
 				<div class="tic-top">
 					<div class="tic-header"></div>
 				</div>
 				<div class="tic-middle">
-					<div class="tic-sidebar">
+					<div class="tic-sidebar" ng-controller="ticSidebarCtrl">
 						<div ng-repeat="entity in model.entities" data-types="{{entity.dataTypes}}" class="tic-sidebar__item {{entity.classStr}}" ng-click="onItemClick(entity.id)">
 							<span class="tic-sidebar__item__icon" ng-class="{'tic-sidebar__item__icon--disabled': !entity.isActive}"></span>
 							<span class="tic-sidebar__item__text" ng-class="{'two-lines': entity.isLongText}">{{entity.text}}</span>
