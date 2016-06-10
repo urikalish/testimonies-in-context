@@ -209,13 +209,34 @@ body {
 }
 
 .tic-map {
+	position: relative;
 	flex: 0 0 929px;
-	background-color: #666;
+	background-color: #FFF;
+}
+
+@keyframes tic-colored-map-animation {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.tic-colored-map {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 929px;
+	height: 493px;
+    background: url('colored-map.png');
+	animation: tic-colored-map-animation 1.5s linear;
 }
 
 .google-map {
 	width: 929px;
 	height: 517px;
+	animation: google-map-animation 2s linear;
 }
 
 .info-window-eye {
