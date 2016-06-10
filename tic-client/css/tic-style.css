@@ -12,6 +12,7 @@ body {
 	padding: 0;
 	background: #333;
 	color: #fff;
+	font-family: helvetica, sans-serif;
 }
 
 .tic-main {
@@ -50,7 +51,7 @@ body {
 	height: 62px;
 	background-color: #DDD;
 	z-index: 10;
-	transition: all 0.4s ease;
+	transition: all 0.3s ease;
 	margin-bottom: 4px;
 	position: absolute;
 	cursor: pointer;
@@ -119,10 +120,9 @@ body {
 	display: none;
 	position: absolute;
     font-size: 20px;
-    font-family: Arial sans-serif;
     margin-left: 12px;
 	padding-right: 20px;
-	margin-top: 18px;
+	margin-top: 20px;
 }
 
 .tic-sidebar__item__text.two-lines {
@@ -310,7 +310,6 @@ body {
 	height: 25px;
 	line-height: 25px;
 	margin-top: -24px;
-	font-family: Arial sans-serif;
 	font-size: 14px;
 }
 
