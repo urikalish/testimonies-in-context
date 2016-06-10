@@ -28,8 +28,8 @@
 				<div class="tic-middle">
 					<div class="tic-sidebar" ng-controller="ticSidebarCtrl">
 						<div ng-repeat="entity in model.entities" data-types="{{entity.dataTypes}}" class="tic-sidebar__item {{entity.classStr}}" ng-click="onItemClick(entity.id)">
-							<span class="tic-sidebar__item__icon" ng-class="{'tic-sidebar__item__icon--disabled': !entity.isActive}"></span>
-							<span class="tic-sidebar__item__text" ng-class="{'two-lines': entity.isLongText}">{{entity.text}}</span>
+							<div class="tic-sidebar__item__icon" ng-class="{'tic-sidebar__item__icon--disabled': !entity.isActive}"></div>
+							<div class="tic-sidebar__item__text" ng-class="{'two-lines': entity.isLongText}">{{entity.text}}</div>
 						</div>
 					</div>
 					<div class="tic-map">

@@ -48,12 +48,14 @@ body {
 .tic-sidebar__item {
 	width: 95px;
 	height: 62px;
-	background-color: #dedbdb;
-	z-index:10;
+	background-color: #DDD;
+	z-index: 10;
 	transition: all 0.4s ease;
-	margin-bottom:4px;
-	position:absolute;
-	cursor:pointer;
+	margin-bottom: 4px;
+	position: absolute;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
 }
 
 .tic-sidebar__item.ghetto:hover {
@@ -97,7 +99,6 @@ body {
 	background: url('sprite-sidebar_icons.png');
     width: 34px;
     height: 38px;
-	margin-top: 12px;
 	margin-left: 28px;
 	background-position-y: -154px;
 }
@@ -117,12 +118,11 @@ body {
 .tic-sidebar__item__text {
 	display: none;
 	position: absolute;
-    vertical-align: top;
-    margin-top: 18px;
     font-size: 20px;
     font-family: Arial sans-serif;
     margin-left: 12px;
 	padding-right: 20px;
+	margin-top: 18px;
 }
 
 .tic-sidebar__item__text.two-lines {
