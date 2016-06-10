@@ -1,4 +1,4 @@
-var dataProvider = {
+var ticDataProvider = {
 
   getRealMarkersData: function getRealMarkersData() {
     return [
@@ -63,17 +63,17 @@ var dataProvider = {
       markersData: [],
       eventsData: []
     };
-    var realMarkersData = dataProvider.getRealMarkersData();
+    var realMarkersData = this.getRealMarkersData();
     for (i = 0; i < realMarkersData.length; i++) {
       if (realMarkersData[i].from <= to && realMarkersData[i].to >= from) {
         data.markersData.push(realMarkersData[i]);
       }
     }
-    var fakeMarkersData = dataProvider.getFakeMarkersData(from, to);
+    var fakeMarkersData = this.getFakeMarkersData(from, to);
     for (i = 0; i < fakeMarkersData.length; i++) {
       data.markersData.push(fakeMarkersData[i]);
     }
-    var eventsData = dataProvider.getRealEventsData();
+    var eventsData = this.getRealEventsData();
     for (i = 0; i < eventsData.length; i++) {
       if (eventsData[i].from <= to && eventsData[i].to >= from) {
         data.eventsData.push(eventsData[i]);
@@ -86,4 +86,4 @@ var dataProvider = {
   }
 };
 
-exports.dataProvider = dataProvider;
+exports.ticDataProvider = ticDataProvider;
