@@ -3,7 +3,7 @@
 		<title>Testimonies in Context</title>
 		<meta name="description" content="Testimonies in Context"/>		
 		<link rel="stylesheet" type="text/css" href="css/tic-style.css"/>
-		<script>function initTic(){setTimeout(function(){angular.element(document.body).injector().get('ticServ').init();},1000);}</script>
+		<script src="js/tic-init.js"></script>
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeR621oXBpqxwSEdtPBBMI5BdnqIhDSP0&callback=initTic" async defer></script>
 		<script src="https://www.google.com/jsapi?key=AIzaSyBeR621oXBpqxwSEdtPBBMI5BdnqIhDSP0"></script>
 		<script src="lib/lodash.js"></script>
@@ -20,8 +20,9 @@
 		<script src="js/tic-sidebar-ctrl.js"></script>
 	</head>
 	<body ng-controller="ticCtrl">
-	    <div class="tic-main">
-			<div class="tic-container">
+	    <div id="tic-main" class="tic-main">
+			<div id="error-message" class="error-message">Error</div>
+			<div id="tic-container" class="tic-container">
 				<div class="tic-top">
 					<div class="tic-header"></div>
 				</div>

@@ -22,6 +22,12 @@ body {
 	align-items: center;
 }
 
+.error-message {
+	display: none;
+	font-size: 20px;
+	color: #dd5e49;
+}
+
 .tic-container {
 	flex: 0 0 auto;
 	width: 1024px;

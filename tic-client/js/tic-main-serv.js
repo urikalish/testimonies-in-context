@@ -35,9 +35,16 @@ angular.module('ticApp').factory('ticServ', function ticServ(ticConstants, ticVa
   }
 
   function init() {
-    ticMapServ.initMap();
-    onDateChange(0);
-    registerDateChangeListener();
+    if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
+      ticMapServ.initMap();
+      onDateChange(0);
+      registerDateChangeListener();
+    } else {
+      document.getElementById('tic-container').style.display = 'none';
+      var errMsgCtrl = document.getElementById('error-message');
+      errMsgCtrl.innerHTML = 'Your browser type is not yet supported, please use Chrome.';
+      errMsgCtrl.style.display = 'inline';
+    }
   }
 
   return {
