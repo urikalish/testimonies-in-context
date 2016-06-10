@@ -10,6 +10,7 @@ angular.module('ticApp').factory('ticServ', function ticServ(ticConstants, ticVa
     var year = Math.trunc(value / 12) + 1936;
     var month = value % 12 + 1;
     ticVariables.curDateStr = ticConstants.monthNames[month - 1] + ' ' + year;
+    $('#' + ticConstants.ctrlId.MAP_DATE_TEXT)[0].innerHTML = ticVariables.curDateStr.substring(0, 3) + ' ' + ('' + year).substring(2);
     $('#' + ticConstants.ctrlId.MAP_PANEL_TEXT)[0].innerHTML = ticVariables.curDateStr;
     var fromDate = year + (month < 10 ? '0' : '') + month + '01';
     var toDate = year + (month < 10 ? '0' : '') + month + '31';

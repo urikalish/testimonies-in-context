@@ -7,8 +7,9 @@ angular.module('ticApp').factory('ticConstants', function ticConstants() {
       apiBase:            'http://localhost:1111/api'
     },
     ctrlId: {
-      DATE_SLIDER:        'date-slider',
-      MAP_PANEL_TEXT:     'tic-map__bottom-panel__text'
+      MAP_DATE_TEXT:      'tic-map-date',
+      MAP_PANEL_TEXT:     'tic-map__bottom-panel__text',
+      DATE_SLIDER:        'tic-date-slider'
     },
     monthNames:           ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
   }
