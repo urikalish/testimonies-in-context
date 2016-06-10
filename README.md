@@ -33,10 +33,21 @@ npm i
 ```sh
 npm start
 ```
+
+Or just run cmd:
+```sh
+run-server
+```
+
 If needed, the port can be changed in ./tic-server/tic-config.js
 
 ## Launching the UI
 Open Chrome Browser, and navigate to http://localhost:1111/tic/
+
+Or just run cmd:
+```sh
+run-ui
+```
 
 ## Links
 
