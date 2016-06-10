@@ -316,7 +316,11 @@ body {
 	height: 25px;
 	line-height: 25px;
 	margin-top: -24px;
-	font-size: 14px;
+	font-size: 15px;
+	width: 929px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 
 .tic-map__bottom-panel__play-btn {
