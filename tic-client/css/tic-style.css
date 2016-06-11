@@ -26,6 +26,10 @@
 	}
 }
 
+.visibility--hidden {
+	visibility: hidden;
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -283,6 +287,14 @@ body {
 	font-size: 20px;
 	text-transform: uppercase;
 	animation: delayed-fade-in-animation 15s linear;
+}
+
+.info-window-container {
+	margin-top: 20px;
+}
+
+.info-window-top {
+
 }
 
 .info-window-eye {
