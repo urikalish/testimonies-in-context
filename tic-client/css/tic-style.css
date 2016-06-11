@@ -220,15 +220,6 @@ body {
 	background-color: #FFF;
 }
 
-@keyframes tic-colored-map-animation {
-	0% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-	}
-}
-
 .tic-colored-map {
 	position: absolute;
 	left: 0;
@@ -236,7 +227,15 @@ body {
 	width: 929px;
 	height: 493px;
     background: url('colored-map.png');
-	animation: tic-colored-map-animation 1.5s linear;
+}
+
+@keyframes fade-in-animation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 .tic-map-date {
@@ -247,12 +246,13 @@ body {
 	color: #dd5e49;
 	font-size: 20px;
 	text-transform: uppercase;
+	animation: fade-in-animation 5s linear 1s;
 }
 
 .google-map {
 	width: 929px;
 	height: 517px;
-	animation: google-map-animation 2s linear;
+	animation: fade-in-animation 5s linear 1s;
 }
 
 .info-window-eye {
@@ -338,11 +338,14 @@ body {
 	left: 20px;
 	top: 3px;
 	vertical-align: middle;
+	opacity: 0;
+	animation: fade-in-animation 5s linear 1s;
 }
 
 .tic-map__bottom-panel__text {
 	margin-left: 55px;
 	color: white;
+	animation: fade-in-animation 5s linear 1s;
 }
 
 .tic-bottom {
