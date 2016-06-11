@@ -1,24 +1,28 @@
-@keyframes fade-in-animation {
+@keyframes delayed-fade-in-animation {
 	0% {
 		opacity: 0;
+		display: none;
+	}
+	50% {
+		opacity: 0;
+		display: block;
 	}
 	100% {
 		opacity: 1;
 	}
 }
 
-@keyframes delayed-fade-in-animation {
+@keyframes delayed-fade-out-animation {
 	0% {
-		opacity: 0;
-		display: none;
-	}
-	40% {
-		opacity: 0;
-		display: block;
-	}
-	100% {
 		opacity: 1;
 		display: block;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		display: none;
 	}
 }
 
@@ -251,6 +255,15 @@ body {
 	width: 929px;
 	height: 493px;
     background: url('colored-map.png');
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.tic-loading-message {
+	font-size: 20px;
+	color: #FFF;
+	animation: delayed-fade-out-animation 15s linear;
 }
 
 .google-map {
