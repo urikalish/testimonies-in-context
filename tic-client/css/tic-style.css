@@ -50,10 +50,10 @@ body {
 	align-items: center;
 }
 
-.error-message {
-	display: none;
+.browser-not-supported {
 	font-size: 20px;
 	color: #dd5e49;
+	animation: delayed-fade-in-animation 2s linear;
 }
 
 .tic-container {
