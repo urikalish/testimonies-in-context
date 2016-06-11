@@ -57,7 +57,7 @@ body {
 .browser-not-supported {
 	font-size: 20px;
 	color: #dd5e49;
-	animation: delayed-fade-in-animation 2s linear;
+	animation: delayed-fade-in-animation 3s linear;
 }
 
 .tic-container {
