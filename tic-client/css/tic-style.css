@@ -7,12 +7,18 @@
 	}
 }
 
-@keyframes fade-out-animation {
+@keyframes delayed-fade-in-animation {
 	0% {
-		opacity: 1;
+		opacity: 0;
+		display: none;
+	}
+	40% {
+		opacity: 0;
+		display: block;
 	}
 	100% {
-		opacity: 0;
+		opacity: 1;
+		display: block;
 	}
 }
 
@@ -245,7 +251,12 @@ body {
 	width: 929px;
 	height: 493px;
     background: url('colored-map.png');
-	animation: fade-out-animation 10s ease 1s;
+}
+
+.google-map {
+	width: 929px;
+	height: 517px;
+	animation: delayed-fade-in-animation 15s linear;
 }
 
 .tic-map-date {
@@ -256,13 +267,7 @@ body {
 	color: #dd5e49;
 	font-size: 20px;
 	text-transform: uppercase;
-	animation: fade-in-animation1 10s ease 1s;
-}
-
-.google-map {
-	width: 929px;
-	height: 517px;
-	animation: fade-in-animation1 10s ease 1s;
+	animation: delayed-fade-in-animation 15s linear;
 }
 
 .info-window-eye {
@@ -353,7 +358,7 @@ body {
 .tic-map__bottom-panel__text {
 	margin-left: 55px;
 	color: white;
-	animation: fade-in-animation 10s ease 1s;
+	animation: delayed-fade-in-animation 15s linear;
 }
 
 .tic-bottom {
