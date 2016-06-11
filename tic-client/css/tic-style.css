@@ -57,6 +57,7 @@ body {
 }
 
 .tic-container {
+	display: none;
 	flex: 0 0 auto;
 	width: 1024px;
 	height: 768px;
@@ -261,8 +262,9 @@ body {
 }
 
 .tic-loading-message {
-	font-size: 20px;
-	color: #FFF;
+	font-size: 100px;
+	font-style: italic;
+	color: #222;
 	animation: delayed-fade-out-animation 15s linear;
 }
 

@@ -12,8 +12,6 @@ angular.module('ticApp').factory('ticConstants', function ticConstants() {
       apiBase:            apiBase
     },
     ctrlId: {
-      TIC_CONTAINER:      'tic-container',
-      ERR_MESSAGE:        'error-message',
       GOOGLE_MAP:         'google-map',
       MAP_DATE_TEXT:      'tic-map-date',
       MAP_PANEL_TEXT:     'tic-map__bottom-panel__text',
