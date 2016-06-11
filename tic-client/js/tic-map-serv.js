@@ -1,9 +1,8 @@
 angular.module('ticApp').factory('ticMapServ', function ticMapServ(ticConstants, ticVariables) {
 
   function initMap() {
-    window.googleMapCtrlId = 'google-map';
     window.googleMapObj = new google.maps.Map(
-      document.getElementById(window.googleMapCtrlId),
+      $('#' + ticConstants.ctrlId.GOOGLE_MAP)[0],
       {
         center: new google.maps.LatLng(49, 14.5),
         zoom: 5,
@@ -37,7 +36,7 @@ angular.module('ticApp').factory('ticMapServ', function ticMapServ(ticConstants,
   window.showLoationInStreetView = function showLoationInStreetView(lat, lon) {
     var fenway = {'lat': lat, 'lng': lon};
     var panorama = new google.maps.StreetViewPanorama(
-      document.getElementById(window.googleMapCtrlId), {
+      $('#' + ticConstants.ctrlId.GOOGLE_MAP)[0], {
         position: fenway,
         pov: {
           heading: 34,

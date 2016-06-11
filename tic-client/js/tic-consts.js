@@ -1,12 +1,20 @@
 angular.module('ticApp').factory('ticConstants', function ticConstants() {
 
+  var protocol = 'http';
+  var server = 'localhost';
+  var port = 1111;
+  var imgBase = protocol + '://' + server + ':' + port + '/tic/img';
+  var apiBase = protocol + '://' + server + ':' + port + '/api';
+
   return {
     url: {
-      serverBase:         'http://localhost:1111/',
-      imgBase:            'http://localhost:1111/tic/img',
-      apiBase:            'http://localhost:1111/api'
+      imgBase:            imgBase,
+      apiBase:            apiBase
     },
     ctrlId: {
+      TIC_CONTAINER:      'tic-container',
+      ERR_MESSAGE:        'error-message',
+      GOOGLE_MAP:         'google-map',
       MAP_DATE_TEXT:      'tic-map-date',
       MAP_PANEL_TEXT:     'tic-map__bottom-panel__text',
       DATE_SLIDER:        'tic-date-slider'

@@ -38,11 +38,11 @@ angular.module('ticApp').factory('ticServ', function ticServ(ticConstants, ticVa
   function init() {
     if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
       ticMapServ.initMap();
-      onDateChange(0);
+      onDateChange(44);
       registerDateChangeListener();
     } else {
-      document.getElementById('tic-container').style.display = 'none';
-      var errMsgCtrl = document.getElementById('error-message');
+      $('#' + ticConstants.ctrlId.TIC_CONTAINER)[0].style.display = 'none';
+      var errMsgCtrl = $('#' + ticConstants.ctrlId.ERR_MESSAGE)[0];
       errMsgCtrl.innerHTML = 'Your browser type is not yet supported, please use Chrome.';
       errMsgCtrl.style.display = 'inline';
     }
