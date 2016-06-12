@@ -39,9 +39,9 @@ angular.module('ticApp').factory('ticMapServ', function ticMapServ(ticConstants,
     infoWindowContentHtml +=      '<div class="info-window-content">';
     infoWindowContentHtml +=          '<img src="img/left.png" class="info-window-left"/>';
     if (data.type === 'video') {
-      infoWindowContentHtml +=        '<video class="info-window-video" controls autoplay><source src="' + data.url + '" type="video/' + data.format + '"/></video>';
+      infoWindowContentHtml +=        '<video class="info-window-video" controls autoplay><source src="' + data.embed + '" type="video/' + data.format + '"/></video>';
     } else if (data.type === 'audio') {
-      infoWindowContentHtml +=        '<audio class="info-window-audio" controls><source src="' + data.url + '" type="audio/' + data.format + '"/></audio>';
+      infoWindowContentHtml +=        '<audio class="info-window-audio" controls><source src="' + data.embed + '" type="audio/' + data.format + '"/></audio>';
     } else if (data.img) {
       infoWindowContentHtml +=        '<img class="info-window-image" src="' + data.img + '"/>';
     }
@@ -81,8 +81,8 @@ angular.module('ticApp').factory('ticMapServ', function ticMapServ(ticConstants,
       icon: ticConstants.url.imgBase + '/' + data.type + '.png'
     });
     marker.addListener('click', function() {
-      if (data.type === 'document') {
-        window.open(data.url);
+      if (data.link) {
+        window.open(data.link);
       } else {
         var infoWindow = new google.maps.InfoWindow({
           content: getInfoWindowContentHtml(data),
