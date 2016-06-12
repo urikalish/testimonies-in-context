@@ -42,8 +42,8 @@ angular.module('ticApp').factory('ticMapServ', function ticMapServ(ticConstants,
       infoWindowContentHtml +=        '<video class="info-window-video" controls autoplay><source src="' + data.url + '" type="video/mp4"/></video>';
     } else if (data.type === 'audio') {
       infoWindowContentHtml +=        '<audio class="info-window-audio" controls><source src="' + data.url + '" type="audio/ogg"/></audio>';
-    } else if (data.url) {
-      infoWindowContentHtml +=        '<img class="info-window-image" src="' + data.url + '"/>';
+    } else if (data.img) {
+      infoWindowContentHtml +=        '<img class="info-window-image" src="' + data.img + '"/>';
     }
     infoWindowContentHtml +=          '<img src="img/right.png" class="info-window-right"/>';
     infoWindowContentHtml +=      '</div>';
