@@ -3,6 +3,7 @@
   exports.data = [
     {
       type: 'video',
+      format: 'mp4',
       from: 19330101,
       to: 19451001,
       lat: 47.6167,
@@ -12,6 +13,7 @@
     },
     {
       type: 'video',
+      format: 'mp4',
       from: 19330101,
       to: 19451001,
       lat: 48.6239,

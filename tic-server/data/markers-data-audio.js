@@ -3,6 +3,7 @@
   exports.data = [
     {
       type: 'audio',
+      format: 'ogg',
       from: 19330101,
       to: 19451001,
       lat: 47.1569,
