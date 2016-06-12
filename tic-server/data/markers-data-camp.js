@@ -8,7 +8,13 @@
       lat: 50.0358,
       lng: 19.1783,
       url: 'http://i.telegraph.co.uk/multimedia/archive/03176/Auschwitz-456x288_3176326a.jpg',
-      text: '<a href="https://en.wikipedia.org/wiki/Auschwitz_concentration_camp" target="_blank"/>Auschwitz</a> concentration camp was a network of German Nazi concentration camps and extermination camps built and operated by the Third Reich in Polish areas annexed by Nazi Germany during World War II. (<a href="http://www.yadvashem.org/yv/en/exhibitions/album_auschwitz/content1.asp" target="_blank"/>Yad Vashem album</a>)'
+      text: '<a href="https://en.wikipedia.org/wiki/Auschwitz_concentration_camp" target="_blank"/>Auschwitz</a> concentration camp was a network of German Nazi concentration camps and extermination camps built and operated by the Third Reich in Polish areas annexed by Nazi Germany during World War II. (<a href="http://www.yadvashem.org/yv/en/exhibitions/album_auschwitz/content1.asp" target="_blank"/>Yad Vashem album</a>)',
+      panorama: {
+        lat: 50.037141,
+        lng: 19.180081,
+        heading: 0,
+        pitch: 0
+      }
     },
     {
       type: 'camp',

@@ -12,14 +12,16 @@ angular.module('ticApp').factory('ticMapServ', function ticMapServ(ticConstants,
     );
   }
 
-  window.showLocationInStreetView = function showLoationInStreetView(lat, lon) {
-    var fenway = {'lat': lat, 'lng': lon};
+  window.showLocationInStreetView = function showLoationInStreetView(lat, lng, heading, pitch) {
     var panorama = new google.maps.StreetViewPanorama(
       $('#' + ticConstants.ctrlId.GOOGLE_MAP)[0], {
-        position: fenway,
+        position: {
+          lat: lat,
+          lng: lng
+        },
         pov: {
-          heading: 34,
-          pitch: 10
+          heading: heading,
+          pitch: pitch
         }
       });
     window.googleMapObj.setStreetView(panorama);
@@ -30,7 +32,9 @@ angular.module('ticApp').factory('ticMapServ', function ticMapServ(ticConstants,
     infoWindowContentHtml +=  '<div class="info-window-container">';
     infoWindowContentHtml +=      '<div class="info-window-top">';
     infoWindowContentHtml +=          '<img src="img/bookmark.png" class="info-window-bookmark"/>';
-    infoWindowContentHtml +=          '<img src="img/eye.png" class="info-window-eye" onclick="showLocationInStreetView(50.037141, 19.180081)"/>';
+    if (data.panorama) {
+      infoWindowContentHtml +=        '<img src="img/eye.png" class="info-window-eye" onclick="showLocationInStreetView(' + data.panorama.lat + ',' + data.panorama.lng+ ',' +data.panorama.heading+ ',' + data.panorama.pitch + ')"/>';
+    }
     infoWindowContentHtml +=      '</div>';
     infoWindowContentHtml +=      '<div class="info-window-content">';
     infoWindowContentHtml +=          '<img src="img/left.png" class="info-window-left"/>';
