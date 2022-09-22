@@ -6,7 +6,7 @@
     "start": "node tic-server/tic-server.js"
   },
   "dependencies": {
-    "express": "~4.13.4",
-    "body-parser": "~1.15.1"
+    "express": "~4.16.0",
+    "body-parser": "~1.18.2"
   }
 }
